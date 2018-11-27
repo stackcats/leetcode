@@ -11,7 +11,12 @@ class Solution(object):
         :type root: Node
         :rtype: List[int]
         """
-        if not root:
-            return []
-
+        st = [root]
+        res = []
         
+        while len(st) > 0:
+            node = st.pop()
+            if node:
+                res.append(node.val)
+                st.extend(node.children[::-1])
+        return res        
