@@ -1,4 +1,4 @@
-#  https://leetcode.com/problems/maximum-depth-of-n-ary-tree/description/
+# https://leetcode.com/problems/maximum-depth-of-n-ary-tree/description/
 
 # 层次遍历实现非递归
 """
