@@ -1,0 +1,9 @@
+// https://leetcode.com/problems/single-number/description/
+// 异或
+int singleNumber(int *nums, int numsSize) {
+  int res = nums[0];
+  for (int i = 1; i < numsSize; i++) {
+    res ^= nums[i];
+  }
+  return res;
+}
