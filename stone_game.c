@@ -16,5 +16,5 @@ bool stoneGame(int *piles, int pilesSize) {
           max(piles[i] - d[i + 1][i + len], piles[i + len] - d[i][i + len - 1]);
     }
   }
-  return d[0][pilesSize - 1];
+  return d[0][pilesSize - 1] > 0;
 }
