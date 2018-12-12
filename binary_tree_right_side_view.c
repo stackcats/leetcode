@@ -99,7 +99,7 @@ int *rightSideView(struct TreeNode *root, int *returnSize) {
 
     Queue *t = q1;
     q1 = q2;
-    q2 = q1;
+    q2 = t;
   }
 
   free(q1);
