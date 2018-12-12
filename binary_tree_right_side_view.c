@@ -81,10 +81,8 @@ int *rightSideView(struct TreeNode *root, int *returnSize) {
   int *arr = calloc(1024, sizeof(int));
   *returnSize = 0;
 
-  struct TreeNode *rightMost, node;
-
   while (!queue_is_empty(q1)) {
-    rightMost = queue_last(q1);
+    struct TreeNode *rightMost = queue_last(q1);
 
     arr[*returnSize] = rightMost->val;
     *returnSize += 1;
