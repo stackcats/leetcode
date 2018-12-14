@@ -9,7 +9,7 @@
  * };
  */
 
-inline max(int a, int b) { return a < b ? b : a; }
+inline int max(int a, int b) { return a < b ? b : a; }
 
 int helper(struct TreeNode *root, int *m) {
   if (!root) {

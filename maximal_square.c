@@ -1,8 +1,8 @@
 // https://leetcode.com/problems/maximal-square/description/
 
-inline max(int a, int b) { return a < b ? b : a; }
+inline int max(int a, int b) { return a < b ? b : a; }
 
-inline min(int a, int b) { return a < b ? a : b; }
+inline int min(int a, int b) { return a < b ? a : b; }
 
 int maximalSquare(char **matrix, int matrixRowSize, int matrixColSize) {
   if (matrixRowSize == 0 || matrixColSize == 0) {

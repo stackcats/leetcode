@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/largest-rectangle-in-histogram/description/
 
-inline max(int a, int b) { return a < b ? b : a; }
+inline int max(int a, int b) { return a < b ? b : a; }
 
 typedef struct {
   int *arr;

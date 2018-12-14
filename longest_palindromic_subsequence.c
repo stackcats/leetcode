@@ -6,7 +6,7 @@
 // d[i][j] = d[i+1][j-1] + 2 (s[i] == s[j])
 // d[i][j] = max(d[i+1][j], d[i][j-1])
 
-inline max(int a, int b) { return a < b ? b : a; }
+inline int max(int a, int b) { return a < b ? b : a; }
 
 int longestPalindromeSubseq(char *s) {
   int len = strlen(s);

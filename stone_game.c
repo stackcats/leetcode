@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/stone-game/description/
 
-inline max(int a, int b) { return a < b ? b : a; }
+inline int max(int a, int b) { return a < b ? b : a; }
 
 // 用二维数组缓存数据把决策树递归转化为循环
 bool stoneGame(int *piles, int pilesSize) {

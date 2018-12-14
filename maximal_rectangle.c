@@ -4,7 +4,7 @@
 // 时间复杂度O(matrixRowSize * matrixColSize)
 // 空间复杂度O(matrixColSize)
 
-inline max(int a, int b) { return a < b ? b : a; }
+inline int max(int a, int b) { return a < b ? b : a; }
 
 int maximalRectangleInHistogram(int *nums, int numsSize) {
   int stack[numsSize + 1];
