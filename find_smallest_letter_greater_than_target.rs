@@ -1,4 +1,4 @@
-// https://leetcode.com/submissions/detail/195385930/
+// https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
 
 impl Solution {
     pub fn next_greatest_letter(letters: &mut Vec<char>, target: &mut char) -> char {
