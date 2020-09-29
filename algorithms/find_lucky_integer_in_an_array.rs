@@ -7,11 +7,12 @@ impl Solution {
             let counter = map.entry(*each).or_insert(0);
             *counter += 1;
         }
+        let mut ans = -1;
         for k in map.keys() {
-            if *k == map[k] {
-                return *k;
+            if *k == map[k] && map[k] > ans {
+                ans = map[k];
             }
         }
-        -1
+        ans
     }
 }
