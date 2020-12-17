@@ -24,7 +24,6 @@ impl Solution {
         }
         let mut ans = 1_u64;
         let mut others = n as u64 - num_of_primes;
-        println!("{} {}", num_of_primes, others);
         while others > 1 {
             ans = others * ans % 1000000007;
             others -= 1;
