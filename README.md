@@ -1,4 +1,3 @@
 # leetcode
 
-![](https://leetcode-badge.chyroc.cn/?name=stackcats&refresh=true) 
-![leetcode badge](https://leetcode-badge.chyroc.cn/?name=stackcats&leetcode_badge_style=Leetcode%20|%20Ranking-{{.ranking}}-green.svg&refresh=true)
+[![KnlnKS's LeetCode stats](https://leetcode-stats-six.vercel.app/api?username=stackcats&theme=dark)](https://github.com/KnlnKS/leetcode-stats)
