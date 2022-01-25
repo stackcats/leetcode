@@ -1,6 +1,6 @@
 impl Solution {
     pub fn rearrange_array(nums: Vec<i32>) -> Vec<i32> {
-        let mut ans = Vec::with_capacity(nums.len());
+        let mut ans = vec![0; nums.len()];
         let mut i = 0;
         let mut j = 1;
         for &n in &nums {
