@@ -1,5 +1,3 @@
-use std::collections::VecDeque;
-
 fn dfs(land: &[Vec<i32>], visited: &mut Vec<Vec<bool>>, i: usize, j: usize, x: &mut usize, y: &mut usize) {
     if visited[i][j] {
         return;
