@@ -3,27 +3,20 @@ defmodule Solution do
   def number_of_arithmetic_slices(nums) do
     nums
     |> Enum.with_index()
-    |> aux(0, 1, 0)
+    |> aux(0, 0)
   end
 
-  def aux([], left, right, ans), do: ans
+  def aux([], _ct, ans), do: ans
 
-  def aux([_], left, right, ans), do: ans
+  def aux([_], _ct, ans), do: ans
 
-  def aux([_, _], left, right, ans), do: ans + ct(left, right)
+  def aux([_, _], _ct, ans), do: ans
 
-  def aux([{a, i}, {b, j}, {c, k} | rest], left, right, ans) do
+  def aux([{a, i}, {b, j}, {c, k} | rest], ct, ans) do
     if a - b == b - c do
-      aux([{b, j}, {c, k} | rest], left, k, ans)
+      aux([{b, j}, {c, k} | rest], ct + 1, ans + ct + 1)
     else
-      aux([{b, j}, {c, k} | rest], j, right, ans + ct(left, right))
+      aux([{b, j}, {c, k} | rest], 0, ans)
     end
-  end
-
-  def ct(left, right) when right < left + 2, do: 0
-
-  def ct(left, right) do
-    n = right - left - 1
-    div((1 + n) * n, 2)
   end
 end
