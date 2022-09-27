@@ -5,10 +5,9 @@ impl Solution {
         let mut set = HashSet::new();
         for i in 0..nums.len() - 1 {
             let sum = nums[i] + nums[i + 1];
-            if set.contains(&sum) {
+            if !set.insert(sum) {
                 return true;
             }
-            set.insert(sum);
         }
         false
     }
