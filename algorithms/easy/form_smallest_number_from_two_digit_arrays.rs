@@ -1,13 +1,25 @@
 impl Solution {
-    pub fn min_number(mut nums1: Vec<i32>, mut nums2: Vec<i32>) -> i32 {
-        nums1.sort_unstable();
-        nums2.sort_unstable();
-        if nums1[0] == nums2[0] {
-            nums1[0]
-        } else if nums1[0] < nums2[0] {
-            nums1 * 10 + nums2[0]
-        } else {
-            nums2[0] * 10 + nums[1]
+    pub fn min_number(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {
+        let mut arr = vec![0; 10];
+
+        let mut a = 10;
+        for n in nums1 {
+            arr[n as usize] += 1;
+            a = a.min(n);
         }
+
+        let mut b = 10;
+        for n in nums2 {
+            arr[n as usize] += 1;
+            b = b.min(n);
+        }
+
+        for (i, ct) in arr.into_iter().enumerate() {
+            if ct == 2 {
+                return i as i32;
+            }
+        }
+
+        a.min(b) * 10 + a.max(b)
     }
 }
