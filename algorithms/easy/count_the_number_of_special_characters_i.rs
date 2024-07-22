@@ -5,9 +5,9 @@ impl Solution {
         let mut lower = [false; 26];
         let mut upper = [false; 26];
         for c in word.as_bytes() {
-            if *c >= b'a' { 
+            if *c >= b'a' {
                 lower[(c - b'a') as usize] = true;
-            } else { 
+            } else {
                 upper[(c - b'A') as usize] = true;
             }
         }
