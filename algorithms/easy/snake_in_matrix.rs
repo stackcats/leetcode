@@ -11,6 +11,6 @@ impl Solution {
                 _ => unreachable!(),
             }
         }
-        i as i32 * n + j as i32
+        i * n + j
     }
 }
